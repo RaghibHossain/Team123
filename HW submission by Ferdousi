@@ -1,1 +1,43 @@
+#For loop
+balance = 0
+deposit = 20500
+
+age = 22
+retire_age = 65
+years_to_retirement = retire_age - age
+
+rate = 13.5
+real_rate = rate*0.01
+
+i = 0
+
+for year in range(years_to_retirement):
+    balance = (balance + deposit)*(1 + real_rate)
+    i += 1
+print(balance, i)
+print("At retirement age, I will have ${}".format(balance))
+
+Output:
+39752011.53604165 43
+At retirement age, I will have $39752011.53604165
+
+
+#While loop
+balance = 0
+deposit = 20500
+
+age = 22
+
+rate = 13.5
+real_rate = rate*0.01
+
+retirement_value = 35000000
+while balance < retirement_value:
+    balance = (balance + deposit)*(1 + real_rate)
+    age += 1
+
+print("I will have {} at {} years old.".format(balance, age))
+
+Output:
+I will have 35003298.71016885 at 64 years old.
 
