@@ -1,0 +1,20 @@
+#investmentaccount1
+
+#time
+age = 22
+retire_age = 65
+year = 2022
+years_to_retirement = retire_age - age
+
+
+#account
+balance = 0
+deposit = 20500
+
+#interest
+rate = 13.5
+real_rate = rate*0.01
+
+for year in range(years_to_retirement):
+  balance = (balance + deposit)*(1 + real_rate)
+print("At retirement age, I will have ${}".format(balance))
